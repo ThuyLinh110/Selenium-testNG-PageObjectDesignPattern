@@ -5,7 +5,6 @@ public class Utilities {
     {
         String userDirectory = System.getProperty("user.dir");
         return  userDirectory;
-
     }
 
 }

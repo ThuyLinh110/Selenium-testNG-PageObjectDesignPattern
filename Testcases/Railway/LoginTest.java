@@ -1,7 +1,6 @@
 package Railway;
 import Common.Utilities;
 import Constant.Constant;
-import Railway.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -33,15 +32,16 @@ public class LoginTest {
     {
         System.out.println("TC01- User can login with valid account ");
         HomePage homePage = new HomePage();
-        homePage.openPage();
+        homePage.openPage(Constant.RAILWAY_URL);
         homePage.clickTabLogin();
         LoginPage loginPage = new LoginPage();
         loginPage.login(Constant.USERNAME, Constant.PASSWORD);
         String expectedMsg = "Welcome "+Constant.USERNAME;
         String actualMsg = loginPage.getWelcomeMessage();
         Assert.assertEquals(actualMsg, expectedMsg, "Welcome message is not displayed as expected ");
-
-
     }
+
+
+
 
 }

@@ -47,9 +47,10 @@ public class BasePage {
     {
         return Constant.WEBDRIVER;
     }
-    public void openPage()
+    public void openPage(String baseUrl)
     {
-        Constant.WEBDRIVER.navigate().to(Constant.RAILWAY_URL);
+
+        Constant.WEBDRIVER.navigate().to(baseUrl);
     }
     public void closePage()
     {
