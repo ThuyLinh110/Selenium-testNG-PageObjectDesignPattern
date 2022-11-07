@@ -20,7 +20,7 @@ public class BasePage {
     private By tabChangePassword = By.xpath("//div[@id ='menu']//a[@href='/Account/ChangePassword.cshtml'] " );
     private By tabLogout = By.xpath("//div[@id ='menu']//a[@href='/Account/Logout'] " );
 
-    private By msgWelcome = By.xpath("//div[@class = 'account']//strong");
+    private By lblWelcome = By.xpath("//div[@class = 'account']//strong");
 
 
 
@@ -38,7 +38,7 @@ public class BasePage {
     protected WebElement getTabChangePassword() {return Constant.WEBDRIVER.findElement(tabChangePassword) ;}
     protected WebElement getTabLogout() {return Constant.WEBDRIVER.findElement(tabLogout) ;}
 
-    protected WebElement getMsgWelcome() { return Constant.WEBDRIVER.findElement(msgWelcome); }
+    protected WebElement getMsgWelcome() { return Constant.WEBDRIVER.findElement(lblWelcome); }
 
 
 
