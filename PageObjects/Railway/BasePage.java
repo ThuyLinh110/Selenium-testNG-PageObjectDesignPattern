@@ -8,37 +8,37 @@ public class BasePage {
 
 
     //Locator of tabs
-    protected By tabHome = By.xpath("//div[@id ='menu']//a[@href='../'] " );
-    protected By tabFAQ = By.xpath("//div[@id ='menu']//a[@href='#'] " );
-    protected By tabContact = By.xpath("//div[@id ='menu']//a[@href='/Page/Contact.cshtml'] " );
-    protected By tabTimetable = By.xpath("//div[@id ='menu']//a[@href='TrainTimeListPage.cshtml'] " );
-    protected By tabTicketPrice = By.xpath("//div[@id ='menu']//a[@href='/Page/TrainPriceListPage.cshtml'] " );
-    protected By tabBookTicket = By.xpath("//div[@id ='menu']//a[@href='/Page/BookTicketPage.cshtml'] " );
-    protected By tabRegister = By.xpath("//div[@id ='menu']//a[@href='/Account/Register.cshtml'] " );
-    protected By tabLogin = By.xpath("//div[@id ='menu']//a[@href='/Account/Login.cshtml'] " );
-    protected By tabMyTicket = By.xpath("//div[@id ='menu']//a[@href='/Page/ManageTicket.cshtml'] " );
-    protected By tabChangePassword = By.xpath("//div[@id ='menu']//a[@href='/Account/ChangePassword.cshtml'] " );
-    protected By tabLogout = By.xpath("//div[@id ='menu']//a[@href='/Account/Logout'] " );
+    private By tabHome = By.xpath("//div[@id ='menu']//a[@href='../'] " );
+    private By tabFAQ = By.xpath("//div[@id ='menu']//a[@href='#'] " );
+    private By tabContact = By.xpath("//div[@id ='menu']//a[@href='/Page/Contact.cshtml'] " );
+    private By tabTimetable = By.xpath("//div[@id ='menu']//a[@href='TrainTimeListPage.cshtml'] " );
+    private By tabTicketPrice = By.xpath("//div[@id ='menu']//a[@href='/Page/TrainPriceListPage.cshtml'] " );
+    private By tabBookTicket = By.xpath("//div[@id ='menu']//a[@href='/Page/BookTicketPage.cshtml'] " );
+    private By tabRegister = By.xpath("//div[@id ='menu']//a[@href='/Account/Register.cshtml'] " );
+    private By tabLogin = By.xpath("//div[@id ='menu']//a[@href='/Account/Login.cshtml'] " );
+    private By tabMyTicket = By.xpath("//div[@id ='menu']//a[@href='/Page/ManageTicket.cshtml'] " );
+    private By tabChangePassword = By.xpath("//div[@id ='menu']//a[@href='/Account/ChangePassword.cshtml'] " );
+    private By tabLogout = By.xpath("//div[@id ='menu']//a[@href='/Account/Logout'] " );
 
-    protected By msgWelcome = By.xpath("//div[@class = 'account']//strong");
+    private By msgWelcome = By.xpath("//div[@class = 'account']//strong");
 
 
 
 
     //Web Elements
-    private WebElement getTabHome() {return Constant.WEBDRIVER.findElement(tabHome) ;}
-    private WebElement getTabFAQ() {return Constant.WEBDRIVER.findElement(tabFAQ) ;}
-    private WebElement getTabContact() {return Constant.WEBDRIVER.findElement(tabContact) ;}
-    private WebElement getTabTimetable() {return Constant.WEBDRIVER.findElement(tabTimetable) ;}
-    private WebElement getTabTicketPrice() {return Constant.WEBDRIVER.findElement(tabTicketPrice) ;}
-    private WebElement getTabBookTicket() {return Constant.WEBDRIVER.findElement(tabBookTicket) ;}
-    private WebElement getTabRegister() {return Constant.WEBDRIVER.findElement(tabRegister) ;}
-    private WebElement getTabLogin() {return Constant.WEBDRIVER.findElement(tabLogin) ;}
-    private WebElement getTabMyTicket() {return Constant.WEBDRIVER.findElement(tabMyTicket) ;}
-    private WebElement getTabChangePassword() {return Constant.WEBDRIVER.findElement(tabChangePassword) ;}
-    private WebElement getTabLogout() {return Constant.WEBDRIVER.findElement(tabLogout) ;}
+    protected WebElement getTabHome() {return Constant.WEBDRIVER.findElement(tabHome) ;}
+    protected WebElement getTabFAQ() {return Constant.WEBDRIVER.findElement(tabFAQ) ;}
+    protected WebElement getTabContact() {return Constant.WEBDRIVER.findElement(tabContact) ;}
+    protected WebElement getTabTimetable() {return Constant.WEBDRIVER.findElement(tabTimetable) ;}
+    protected WebElement getTabTicketPrice() {return Constant.WEBDRIVER.findElement(tabTicketPrice) ;}
+    protected WebElement getTabBookTicket() {return Constant.WEBDRIVER.findElement(tabBookTicket) ;}
+    protected WebElement getTabRegister() {return Constant.WEBDRIVER.findElement(tabRegister) ;}
+    protected WebElement getTabLogin() {return Constant.WEBDRIVER.findElement(tabLogin) ;}
+    protected WebElement getTabMyTicket() {return Constant.WEBDRIVER.findElement(tabMyTicket) ;}
+    protected WebElement getTabChangePassword() {return Constant.WEBDRIVER.findElement(tabChangePassword) ;}
+    protected WebElement getTabLogout() {return Constant.WEBDRIVER.findElement(tabLogout) ;}
 
-    private WebElement getMsgWelcome() { return Constant.WEBDRIVER.findElement(msgWelcome); }
+    protected WebElement getMsgWelcome() { return Constant.WEBDRIVER.findElement(msgWelcome); }
 
 
 
