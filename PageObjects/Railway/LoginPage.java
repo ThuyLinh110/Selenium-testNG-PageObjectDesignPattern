@@ -10,6 +10,7 @@ public class LoginPage extends BasePage {
     private By btnLogin = By.xpath("//input[@value='Login']");
     private By lnkRegister = By.xpath("//div[@id ='content']//a[@href ='Register.cshtml']");
     private By lnkForgotPassword = By.xpath("//div[@id ='content']//a[@href ='/Account/ForgotPassword.cshtml']");
+    private By msgError = By.xpath("//p[@class ='message error LoginForm']");
 
 
     //WebElements
@@ -32,14 +33,25 @@ public class LoginPage extends BasePage {
     private WebElement getLnkForgotPassword() {
         return Constant.WEBDRIVER.findElement(lnkForgotPassword);
     }
+    private WebElement getMsgError()
+    {
+        return Constant.WEBDRIVER.findElement(msgError);
+    }
 
 
     //Methods
 
     public void login(String userName, String password) {
+        getTxtUserName().clear();
+        getTxtPassword().clear();
         getTxtUserName().sendKeys(userName);
         getTxtPassword().sendKeys(password);
         getBtnLogin().click();
+    }
+
+    public String getMessageError()
+    {
+        return getMsgError().getText();
     }
 
     public void navigateRegisterLink() {
