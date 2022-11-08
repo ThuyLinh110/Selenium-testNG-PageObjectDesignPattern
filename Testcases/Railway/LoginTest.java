@@ -61,8 +61,28 @@ public class LoginTest {
             actualMsg = loginPage.getMessageError();
             Assert.assertEquals(actualMsg, expectedMsg, "Error message is not displayed as expected ");
         }
+    }
 
+    @Test
+    public void TC03() {
+        System.out.println("TC03- User cannot login with email that haven't already existed");
+        // Access excel file
+        ExcelUtils notExistedEmail = new ExcelUtils();
+        notExistedEmail.setExcelFile(Constant.Path_NotExistedEmail, "Sheet1");
+        int numRow = notExistedEmail.getNumRow();
 
+        HomePage homePage = new HomePage();
+        homePage.openPage(Constant.RAILWAY_URL);
+        homePage.clickTabLogin();
+        LoginPage loginPage = new LoginPage();
+        String expectedMsg = "Invalid username or password. Please try again.";
+        String actualMsg = "";
+
+        for (int i = 1; i <= numRow; i++) {
+            loginPage.login(notExistedEmail.getCellData(i, 0), Constant.PASSWORD);
+            actualMsg = loginPage.getMessageError();
+            Assert.assertEquals(actualMsg, expectedMsg, "Error message is not displayed as expected ");
+        }
     }
 
 
