@@ -11,6 +11,8 @@ public class LoginPage extends BasePage {
     private By lnkRegister = By.xpath("//div[@id ='content']//a[@href ='Register.cshtml']");
     private By lnkForgotPassword = By.xpath("//div[@id ='content']//a[@href ='/Account/ForgotPassword.cshtml']");
     private By msgError = By.xpath("//p[@class ='message error LoginForm']");
+    private By msgErrorUsename = By.xpath("//li[@class = 'username']//label[@class ='validation-error']");
+    private By msgErrorPassword = By.xpath("//li[@class = 'password']//label[@class ='validation-error']");
 
 
     //WebElements
@@ -33,11 +35,11 @@ public class LoginPage extends BasePage {
     private WebElement getLnkForgotPassword() {
         return Constant.WEBDRIVER.findElement(lnkForgotPassword);
     }
-    private WebElement getMsgError()
-    {
-        return Constant.WEBDRIVER.findElement(msgError);
-    }
 
+    private WebElement getMsgError() {return Constant.WEBDRIVER.findElement(msgError); }
+    private WebElement getMsgErrorUserName(){return Constant.WEBDRIVER.findElement(msgErrorUsename); }
+
+    private WebElement getMsgErrorPassword(){return Constant.WEBDRIVER.findElement(msgErrorPassword);}
 
     //Methods
 
@@ -49,9 +51,14 @@ public class LoginPage extends BasePage {
         getBtnLogin().click();
     }
 
-    public String getMessageError()
-    {
+    public String getMessageError() {
         return getMsgError().getText();
+    }
+    public String getMessageErrorUserName(){
+        return  getMsgErrorUserName().getText();
+    }
+    public String getMessageErrorPassword(){
+        return getMsgErrorPassword().getText();
     }
 
     public void navigateRegisterLink() {
