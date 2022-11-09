@@ -11,22 +11,9 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class LoginTest {
+public class LoginTest extends BaseTest {
 
-    @BeforeMethod
-    public void beforeMethod() {
 
-        System.out.println("Pre-condition");
-        System.setProperty("webdriver.chrome.driver", Utilities.getPathProject() + "\\Executables\\chromedriver.exe");
-        Constant.WEBDRIVER = new ChromeDriver();
-        Constant.WEBDRIVER.manage().window().maximize();
-    }
-
-    @AfterMethod
-    public void afterMethod() {
-        System.out.println("Post-condition");
-        Constant.WEBDRIVER.quit();
-    }
 
     @Test
     public void TC01() {
