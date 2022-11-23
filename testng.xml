@@ -6,11 +6,20 @@
 
         <classes>
 
-            <class name="Railway.MyTicketTest">
-                <methods>
-                    <include name="TC16"/>
+            <class name="Railway.RegisterTest">
 
-                </methods>
+            </class>
+            <class name="Railway.LoginTest">
+
+            </class>
+            <class name="Railway.MyTicketTest">
+
+            </class>
+            <class name="Railway.BookticketTest">
+
+            </class>
+            <class name="Railway.ChangePasswordTest">
+
             </class>
         </classes>
     </test>

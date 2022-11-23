@@ -1,12 +1,8 @@
 package Railway;
-
 import Common.WebElementManager;
 import Constant.Constant;
 import org.openqa.selenium.By;
-
 import org.openqa.selenium.WebElement;
-
-import java.util.concurrent.TimeUnit;
 
 public class ChangePasswordPage extends BasePage{
     private By txtCurrentPassword = By.id("currentPassword");
@@ -37,6 +33,8 @@ public class ChangePasswordPage extends BasePage{
     }
 
     public String getMessageSuccess(){
+        WebElementManager.scrollToElement(getMsgSuccess());
         return getMsgSuccess().getText();
     }
-    }
+
+}

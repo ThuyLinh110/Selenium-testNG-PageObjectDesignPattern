@@ -1,5 +1,4 @@
 package Railway;
-
 import Common.WebElementManager;
 import Constant.Constant;
 import org.openqa.selenium.By;
@@ -8,7 +7,6 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.concurrent.TimeUnit;
 
 public class BookticketPage extends BasePage {
-
     private By ddlDate = By.name("Date");
     private By ddlDepart = By.name("DepartStation");
     private By ddlArrive = By.name("ArriveStation");
@@ -16,7 +14,6 @@ public class BookticketPage extends BasePage {
     private By ddlTicketAmount = By.name("TicketAmount");
     private By btnBookTicket = By.xpath("//input[@value = 'Book ticket']");
     private String valueByHeader = "//td[count(//th[.='%s']/preceding-sibling::th)+1]" ;
-
 
     private Select getDdlDate() {
         return new Select(Constant.WEBDRIVER.findElement(ddlDate));
@@ -74,4 +71,5 @@ public class BookticketPage extends BasePage {
     public String getSelectedArrive() {
         return getDdlArrive().getFirstSelectedOption().getText();
     }
+
 }

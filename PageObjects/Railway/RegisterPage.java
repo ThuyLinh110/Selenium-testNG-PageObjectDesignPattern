@@ -1,11 +1,8 @@
 package Railway;
-
 import Common.WebElementManager;
 import Constant.Constant;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
-import java.util.concurrent.TimeUnit;
 
 public class RegisterPage extends BasePage {
     private By txtEmail = By.id("email");
