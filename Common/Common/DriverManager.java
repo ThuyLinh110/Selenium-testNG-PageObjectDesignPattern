@@ -3,7 +3,6 @@ package Common;
 import Constant.Constant;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 public class DriverManager {
     public static void openBrowser(String browserType){
         switch (browserType) {

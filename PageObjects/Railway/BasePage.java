@@ -1,10 +1,8 @@
 package Railway;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import Constant.Constant;
 import Common.WebElementManager;
-
 
 public class BasePage {
     //Locator of tabs
@@ -38,7 +36,6 @@ public class BasePage {
         if (tab != null) return true;
         return false;
     }
-
 
     public String getNameTitlePage() {
         return getLblNamePage().getText();

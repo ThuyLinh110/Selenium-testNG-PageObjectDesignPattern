@@ -1,10 +1,8 @@
 package Railway;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import Constant.Constant;
 import Common.WebElementManager;
-import java.util.concurrent.TimeUnit;
 
 public class LoginPage extends BasePage {
     private By txtUserName = By.id("username");
@@ -15,7 +13,6 @@ public class LoginPage extends BasePage {
     private By lblError = By.xpath("//p[@class ='message error LoginForm']");
     private By lblErrorUsename = By.xpath("//li[@class = 'username']//label[@class ='validation-error']");
     private By lblErrorPassword = By.xpath("//li[@class = 'password']//label[@class ='validation-error']");
-
 
     //WebElements
     private WebElement getTxtUserName() {
