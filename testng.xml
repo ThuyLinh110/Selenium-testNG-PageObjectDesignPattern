@@ -6,21 +6,21 @@
 
         <classes>
 
-            <class name="Railway.RegisterTest">
+<!--            <class name="Railway.RegisterTest">-->
 
-            </class>
-            <class name="Railway.LoginTest">
+<!--            </class>-->
+<!--            <class name="Railway.LoginTest">-->
 
-            </class>
+<!--            </class>-->
             <class name="Railway.MyTicketTest">
 
             </class>
-            <class name="Railway.BookticketTest">
+<!--            <class name="Railway.BookticketTest">-->
 
-            </class>
-            <class name="Railway.ChangePasswordTest">
+<!--            </class>-->
+<!--            <class name="Railway.ChangePasswordTest">-->
 
-            </class>
+<!--            </class>-->
         </classes>
     </test>
 </suite>
