@@ -23,7 +23,7 @@ public class MyTicketPage extends BasePage{
 
     public void cancelTicketByValueNo(String no){
         WebElementManager.clickToElement(getBtnCancelByValueNo(no));
-        Constant.WEBDRIVER.switchTo().alert().accept();
+        WebElementManager.getAlert().accept();
     }
 
     public boolean checkCancelTicket(String id) {

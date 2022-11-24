@@ -52,7 +52,6 @@ public class BookticketPage extends BasePage {
     }
 
     public void clickBtnBookticket() {
-        Constant.WEBDRIVER.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         WebElementManager.clickToElement(getBtnBookticket());
     }
 
