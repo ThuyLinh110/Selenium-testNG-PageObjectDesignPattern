@@ -10,4 +10,14 @@ public class BasePage {
     private By lblWelcome = By.xpath("//div[@class = 'account']//strong");
     private By lblNamePage = By.xpath("//h1[@align='center']");
 
+    protected WebElement getTab(String tab) {
+        return Constant.WEBDRIVER.findElement(By.xpath(String.format(tabName, tab)));
+    }
+
+    public void clickTab(String tab) {
+        WebElementManager.clickToElement(getTab(tab));
+    }
+
+
+
 }

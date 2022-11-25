@@ -1,7 +1,14 @@
 [
   {
     "Date index": 3,
-    "Depart Station": "Sài Gòn",
+    "Depart Station": "Huế",
+    "Arrive Station": "Nha Trang",
+    "Seat": "Soft bed with air conditioner",
+    "Amount": "1"
+  },
+  {
+    "Date index": 4,
+    "Depart Station": "Huế",
     "Arrive Station": "Nha Trang",
     "Seat": "Soft bed with air conditioner",
     "Amount": "1"
@@ -9,7 +16,28 @@
   {
     "Date index": 5,
     "Depart Station": "Huế",
-    "Arrive Station": "Sài Gòn",
+    "Arrive Station": "Nha Trang",
+    "Seat": "Soft bed with air conditioner",
+    "Amount": "1"
+  },
+  {
+    "Date index": 6,
+    "Depart Station": "Huế",
+    "Arrive Station": "Nha Trang",
+    "Seat": "Soft bed with air conditioner",
+    "Amount": "1"
+  },
+  {
+    "Date index": 7,
+    "Depart Station": "Huế",
+    "Arrive Station": "Nha Trang",
+    "Seat": "Soft bed with air conditioner",
+    "Amount": "1"
+  },
+  {
+    "Date index": 8,
+    "Depart Station": "Huế",
+    "Arrive Station": "Nha Trang",
     "Seat": "Soft bed with air conditioner",
     "Amount": "1"
   }
