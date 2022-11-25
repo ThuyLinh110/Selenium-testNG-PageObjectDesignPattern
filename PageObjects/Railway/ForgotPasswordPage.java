@@ -13,9 +13,6 @@ public class ForgotPasswordPage extends BasePage{
         return Constant.WEBDRIVER.findElement(btnSend);
     }
 
-    public void sendInstructions(String email){
-        getTxtEmail().sendKeys(email);
-        WebElementManager.clickToElement(getBtnSend());
-    }
+
 
 }
