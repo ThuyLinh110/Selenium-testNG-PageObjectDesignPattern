@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="Manage_Ticket_run">
+        <parameter name="browser" value="chrome"/>
+
+        <classes>
+<!--            <class name="com.railway.test.MyTicket.C35_TheManageTableDisplaysWithCorrectFormat"></class>-->
+<!--            <class name="com.railway.test.MyTicket.C36_TheNoteContentDisplaysMatchedWithNumberOfNewTickets"></class>-->
+<!--            <class name="com.railway.test.MyTicket.C37_TicketsAreExpired1DayBeforeDeparting"></class>-->
+            <class name="com.railway.test.MyTicket.C38_DeleteButtonDisplaysForExpiredTicket"></class>
+<!--            <class name="com.railway.test.MyTicket.C39_CancelButtonDisplaysForNewTicket"></class>-->
+        </classes>
+    </test>
+</suite>

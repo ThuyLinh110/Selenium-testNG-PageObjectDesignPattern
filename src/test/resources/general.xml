@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="General_run">
+        <parameter name="browser" value="chrome"/>
+
+        <classes>
+<!--            <class name="com.railway.test.Register.C14_RegisterAccountWithEmptyInformationFields"></class>-->
+<!--            <class name="com.railway.test.Register.C12_RegisterAccountWithEmailAlreadyExisted"></class>-->
+<!--            <class name="com.railway.test.Register.C8_RegisterAccountWithInvalidFormatEmail"></class>-->
+<!--            <class name="com.railway.test.Register.C9_RegisterAccountWithInvalidEmailLength"></class>-->
+<!--            <class name="com.railway.test.Register.C10_RegisterAccountWithInvalidPasswordLength"></class>-->
+<!--            <class name="com.railway.test.Register.C11_RegisterAccountWithInvalidPIDLength"></class>-->
+<!--            <class name="com.railway.test.Register.C13_RegisterAccountWithPasswordAndConfirmPasswordThatNotMatched"></class>-->
+<!--            <class name="com.railway.test.Register.C7_RegisterAccountSuccessfullyWithValidInformation"></class>-->
+
+<!--            <class name="com.railway.test.Login.C19_LoginWithAccountThatNotExisted"></class>-->
+<!--            <class name="com.railway.test.Login.C20_LoginWithInvalidPassword"></class>-->
+<!--            <class name="com.railway.test.Login.C21_LoginWithEmptyInformationFields"></class>-->
+<!--            <class name="com.railway.test.Login.LoginWithBlankPassword"></class>-->
+<!--            <class name="com.railway.test.Login.C18_LoginSuccessfullyWithValidAccount"></class>-->
+            
+            <class name="com.railway.test.CheckPrice.C49_TrainTimetableDisplaysWithCorrectInformation"></class>
+        </classes>
+    </test>
+</suite>

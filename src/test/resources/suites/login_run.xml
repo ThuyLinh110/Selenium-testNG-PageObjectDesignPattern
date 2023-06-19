@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="Login_run">
+        <parameter name="browser" value="chrome"/>
+
+        <classes>
+            <class name="com.railway.test.Login.C15_LoginPageStillDisplaysWhenClickingOnBookTicketpageWithUnloggedUser"></class>
+            <class name="com.railway.test.Login.C16_TheWelcomeTextDisplaysInHeaderWithUnloggedUser"></class>
+            <class name="com.railway.test.Login.C17_TheWelcomeTextDisplaysCorrectlyInHeaderWithLoggedUser"></class>
+            <class name="com.railway.test.Login.C18_LoginSuccessfullyWithValidAccount"></class>
+            <class name="com.railway.test.Login.C19_LoginWithAccountThatNotExisted"></class>
+            <class name="com.railway.test.Login.C20_LoginWithInvalidPassword"></class>
+            <class name="com.railway.test.Login.C21_LoginWithEmptyInformationFields"></class>
+        </classes>
+    </test>
+</suite>

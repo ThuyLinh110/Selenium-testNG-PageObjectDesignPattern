@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="BookTicket_run">
+        <parameter name="browser" value="chrome"/>
+
+        <classes>
+<!--            <class name="com.railway.test.BookTicket.C28_BookTicketPageDisplaysWhenClickingOnBookTicketLinksFromTrainTimeTable"></class>-->
+<!--            <class name="com.railway.test.BookTicket.C29_BookTicketPageDisplaysWhenClickingOnBookTicketButtonFromTicketPricePage"></class>-->
+<!--            <class name="com.railway.test.BookTicket.C30_BookTicketPageDisplaysWithRespectiveDefaultOptionsFromTrainTimetable"></class>-->
+<!--            <class name="com.railway.test.BookTicket.C31_BookTicketPageDisplaysWithRespectiveDefaultOptionsFromTicketPricePage"></class>-->
+<!--            <class name="com.railway.test.BookTicket.C32_BookTicketPageDisplaysWithCorrectFormatAndData"></class>-->
+            <class name="com.railway.test.BookTicket.C33_BookTicketSuccessfullyWithValidInformations"></class>
+<!--            <class name="com.railway.test.BookTicket.C34_BookTicketWithTotalTicketMoreThanAllowedQuantity"></class>-->
+
+        </classes>
+    </test>
+</suite>
