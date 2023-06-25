@@ -44,7 +44,7 @@ public class C38_DeleteButtonDisplaysForExpiredTicket extends BaseTest {
             expiredTicketList = myTicketPage.getOperationButtonValueByStatus("Expired");
             if (expiredTicketList.size() > 0) {
                 for (int i=0; i<expiredTicketList.size(); i++) {
-                    Assert.assertEquals(expiredTicketList.get(i), "Detete", "Verify the Delete button displays for Expired ticket");
+                    Assert.assertEquals(expiredTicketList.get(i), "Delete", "Verify the Delete button displays for Expired ticket");
                 }
             }
         }

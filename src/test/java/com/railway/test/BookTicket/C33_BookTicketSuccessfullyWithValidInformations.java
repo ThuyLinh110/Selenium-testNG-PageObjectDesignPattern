@@ -19,29 +19,29 @@ public class C33_BookTicketSuccessfullyWithValidInformations extends BaseTest {
 
 //      Excute TestCase
 
-//        homePage.clickTab("Login");
-//        loginPage.FillData(validUserName, validPassword);
-//        loginPage.clickBtnLogin();
-//        loginPage.clickTab("My ticket");
-//        quantity = quantity - myTicketPage.numberTicketAmount()
-//        ;
-//        if (quantity == 0) {
-//            myTicketPage.cancelTicketByValueNo("1");
-//        }
-//        loginPage.clickTab("Book ticket");
-//        bookticketPage.FillDataTicket(indexDate, depart, arrive, seat, amount);
-//        String expectedDate = bookticketPage.getSelectedDate();
-//        bookticketPage.clickBookTicketBtn();
-//        Assert.assertEquals(bookticketPage.getNameTitlePage(), "Ticket Booked Successfully!", "");
-//        Log.info("Step 9 : Verify that Message 'Ticket booked successfully!' displays.  ");
-//        Assert.assertEquals(bookticketPage.getValueOfTicketByHeader("Depart Date"), expectedDate, "");
-//        Assert.assertEquals(bookticketPage.getValueOfTicketByHeader("Depart Station"), depart, "");
-//        Assert.assertEquals(bookticketPage.getValueOfTicketByHeader("Arrive Station"), arrive, "");
-//        Assert.assertEquals(bookticketPage.getValueOfTicketByHeader("Seat Type"), seat, "");
-//        Assert.assertEquals(bookticketPage.getValueOfTicketByHeader("Amount"), amount);
-//        Log.info("Step 9 : Verify that Ticket information display correctly (Depart Date,  Depart Station,  Arrive Station,  Seat Type,  Amount) ");
-//
-//
+        homePage.clickTab("Login");
+        loginPage.fillData(validUserName, validPassword);
+        loginPage.clickBtnLogin();
+        loginPage.clickTab("My ticket");
+        quantity = quantity - myTicketPage.getNumberTicketByStatus("New")
+        ;
+        if (quantity == 0) {
+            myTicketPage.cancelTicketByValueNo("1");
+        }
+        loginPage.clickTab("Book ticket");
+        bookticketPage.fillDataTicket(indexDate, depart, arrive, seat, amount);
+        String expectedDate = bookticketPage.getSelectedDate();
+        bookticketPage.clickBookTicketBtn();
+        Assert.assertEquals(bookticketPage.getNameTitlePage(), "Ticket Booked Successfully!", "");
+        Log.info("Step 9 : Verify that Message 'Ticket booked successfully!' displays.  ");
+        Assert.assertEquals(bookticketPage.getValueOfTicketByHeader("Depart Date"), expectedDate, "");
+        Assert.assertEquals(bookticketPage.getValueOfTicketByHeader("Depart Station"), depart, "");
+        Assert.assertEquals(bookticketPage.getValueOfTicketByHeader("Arrive Station"), arrive, "");
+        Assert.assertEquals(bookticketPage.getValueOfTicketByHeader("Seat Type"), seat, "");
+        Assert.assertEquals(bookticketPage.getValueOfTicketByHeader("Amount"), amount);
+        Log.info("Step 9 : Verify that Ticket information display correctly (Depart Date,  Depart Station,  Arrive Station,  Seat Type,  Amount) ");
+
+
 
 
     }

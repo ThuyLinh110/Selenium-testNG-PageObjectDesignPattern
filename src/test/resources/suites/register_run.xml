@@ -8,13 +8,19 @@
             <class name="com.railway.test.Register.C5_RegisterPageDisplaysWhenClickingCreateAccountLinkFromHomePage"></class>
             <class name="com.railway.test.Register.C6_RegisterPageDisplaysWhenClickingOnLinkFromLoginPage"></class>
             <class name="com.railway.test.Register.C7_RegisterAccountSuccessfullyWithValidInformation"></class>
-            <class name="com.railway.test.Register.C8_RegisterAccountWithInvalidFormatEmail"></class>
-            <class name="com.railway.test.Register.C14_RegisterAccountWithEmptyInformationFields"></class>
-            <class name="com.railway.test.Register.C12_RegisterAccountWithEmailAlreadyExisted"></class>
-            <class name="com.railway.test.Register.C9_RegisterAccountWithInvalidEmailLength"></class>
-            <class name="com.railway.test.Register.C10_RegisterAccountWithInvalidPasswordLength"></class>
-            <class name="com.railway.test.Register.C11_RegisterAccountWithInvalidPIDLength"></class>
-            <class name="com.railway.test.Register.C13_RegisterAccountWithPasswordAndConfirmPasswordThatNotMatched"></class>
+            <class name="com.railway.test.Register.C8_RegisterAccountFailedWithInvalidFormatEmail"></class>
+            <class name="com.railway.test.Register.C9_RegisterAccountFailedWithEmailLengthShorterThanAllowed"></class>
+            <class name="com.railway.test.Register.C10_RegisterAccountFailedWithPasswordLengthShorterThanAllowed"></class>
+            <class name="com.railway.test.Register.C11_RegisterAccountFailedWithPIDLengthShorterThanAllowed"></class>
+            <class name="com.railway.test.Register.C12_RegisterAccountFailedWithEmailAlreadyExisted"></class>
+            <class name="com.railway.test.Register.C13_RegisterAccountFailedWithPasswordAndConfirmPasswordThatNotMatched"></class>
+            <class name="com.railway.test.Register.C14_RegisterAccountFailedWithBlankEmailField"></class>
+            <class name="com.railway.test.Register.C63_RegisterAccountFailedWithEmailLengthLongerThanAllowed"></class>
+            <class name="com.railway.test.Register.C64_RegisterAccountFailedWithPasswordLengthLongerThanAllowed"></class>
+            <class name="com.railway.test.Register.C65_RegisterAccountFailedWithPIDLengthLongerThanAllowed"></class>
+            <class name="com.railway.test.Register.C66_RegisterAccountFailedWithBlankPasswordField"></class>
+            <class name="com.railway.test.Register.C67_RegisterAccountFailedWithBlankConfirmPasswordField"></class>
+            <class name="com.railway.test.Register.C68_RegisterAccountFailedWithBlankPIDField"></class>
         </classes>
     </test>
 </suite>

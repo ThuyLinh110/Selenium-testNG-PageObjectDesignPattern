@@ -17,18 +17,16 @@ import java.util.List;
 
 public class C39_CancelButtonDisplaysForNewTicket extends BaseTest {
 
-    @Test(priority = 0, description="Testcase39..............")
-    @Description("Testcase39..............")
 
-    public void C38_DeleteButtonDisplaysForExpiredTicket() {
+    public void c39_CancelButtonDisplaysForNewTicket() {
         homePage.clickTab("Login");
         loginPage.login(validUserName, validPassword);
         homePage.clickTab("My ticket");
         if (myTicketPage.checkManageTableDisplays()) {
-            expiredTicketList = myTicketPage.getOperationButtonValueByStatus("New");
-            if (expiredTicketList.size() > 0) {
-                for (int i=0; i<expiredTicketList.size(); i++) {
-                    Assert.assertEquals(expiredTicketList.get(i), "Cancel");
+            newTicketList = myTicketPage.getOperationButtonValueByStatus("New");
+            if (newTicketList.size() > 0) {
+                for (int i = 0; i< newTicketList.size(); i++) {
+                    Assert.assertEquals(newTicketList.get(i), "Cancel");
                 }
             }
 
@@ -44,5 +42,5 @@ public class C39_CancelButtonDisplaysForNewTicket extends BaseTest {
     JSONObject account = JsonUtils.getJSONObjectByIndex(existedAccountList,0);
     String validUserName = account.get("User Name").toString();
     String validPassword = account.get("Password").toString();
-    List<String> expiredTicketList = new ArrayList<>();
+    List<String> newTicketList = new ArrayList<>();
 }

@@ -25,245 +25,143 @@ td,th {border:1px solid #009;padding:.25em .5em}
 <body>
 <table cellspacing="0" cellpadding="0" class="testOverview">
 <tr><th>Test</th><th>Methods<br/>Passed</th><th>Scenarios<br/>Passed</th><th># skipped</th><th># failed</th><th>Total<br/>Time</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em"><a href="#t1">Login_run</a></td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi_attn">6</td><td class="numi">41.5 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t1">Login_run</a></td><td class="numi">6</td><td class="numi">6</td><td class="numi">0</td><td class="numi_attn">3</td><td class="numi">46.2 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="methodOverview" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
 <tr id="t1"><th colspan="5">Login_run &#8212; failed</th></tr>
-<tr class="failedodd"><td>com.railway.test.Login.C19_LoginWithAccountThatNotExisted</td><td><a href="#m1"><b>c19_LoginWithAccountThatNotExisted</b>  </a></td><td class="numi">1</td><td>1686387319737</td><td class="numi">2002</td></tr>
-<tr class="failedeven"><td>com.railway.test.Login.C20_LoginWithInvalidPassword</td><td><a href="#m2"><b>LoginWithInvalidPassword</b>  </a></td><td class="numi">1</td><td>1686387325761</td><td class="numi">2254</td></tr>
-<tr class="failedodd"><td>com.railway.test.Login.C16_TheWelcomeTextDisplaysInHeaderWithUnloggedUser</td><td><a href="#m3"><b>c16_TheWelcomeGuestTextDisplaysInHeaderWithUnloggedUser</b>  </a></td><td class="numi">1</td><td>1686387297467</td><td class="numi">80</td></tr>
-<tr class="failedeven"><td>com.railway.test.Login.C21_LoginWithEmptyInformationFields</td><td><a href="#m4"><b>c21_LoginWithEmptyInformationFields</b>  </a></td><td class="numi">1</td><td>1686387331972</td><td class="numi">1913</td></tr>
-<tr class="failedodd"><td>com.railway.test.Login.C15_LoginPageStillDisplaysWhenClickingOnBookTicketpageWithUnloggedUser</td><td><a href="#m5"><b>c15_LoginPageStillDisplaysWhenClickingOnBookTicketpageWithUnloggedUser</b>  </a></td><td class="numi">1</td><td>1686387292637</td><td class="numi">9</td></tr>
-<tr class="failedeven"><td>com.railway.test.Login.C17_TheWelcomeTextDisplaysCorrectlyInHeaderWithLoggedUser</td><td><a href="#m6"><b>c17_TheWelcomeTextDisplaysCorrectlyInHeaderWithLoggedUser</b>  </a></td><td class="numi">1</td><td>1686387302278</td><td class="numi">3393</td></tr>
+<tr class="failedodd"><td>com.railway.test.Login.C17_TheWelcomeTextDisplaysCorrectlyInHeaderWithLoggedUser</td><td><a href="#m1"><b>c17_TheWelcomeTextDisplaysCorrectlyInHeaderWithLoggedUser</b>  ("TC 17 - Verify the 'Welcome + username' text displays with logged user")</a></td><td class="numi">1</td><td>1687679916795</td><td class="numi">2884</td></tr>
+<tr class="failedeven"><td>com.railway.test.Login.C16_TheWelcomeTextDisplaysInHeaderWithUnloggedUser</td><td><a href="#m2"><b>c16_TheWelcomeGuestTextDisplaysInHeaderWithUnloggedUser</b>  ("TC 16 - Verify the 'Welcome guest!' text displays with unlogged user")</a></td><td class="numi">1</td><td>1687679912512</td><td class="numi">68</td></tr>
+<tr class="failedodd"><td>com.railway.test.Login.C15_LoginPageStillDisplaysWhenClickingOnBookTicketTabWithUnloggedUser</td><td><a href="#m3"><b>c15_LoginPageStillDisplaysWhenClickingOnBookTicketTabWithUnloggedUser</b>  ("TC 15 - Verify Login page still displays when clicking on Book Ticket tab with unlogged user")</a></td><td class="numi">1</td><td>1687679904469</td><td class="numi">107</td></tr>
 <tr><th colspan="5">Login_run &#8212; passed</th></tr>
-<tr class="passedodd"><td>com.railway.test.Login.C18_LoginSuccessfullyWithValidAccount</td><td><a href="#m7"><b>c18_LoginSuccessfullyWithValidAccount</b>  </a></td><td class="numi">1</td><td>1686387309741</td><td class="numi">6235</td></tr>
+<tr class="passedodd"><td>com.railway.test.Login.C20_LoginFailedWithInvalidPassword</td><td><a href="#m4"><b>c20_LoginWithInvalidPassword</b>  ("TC 20 - Login failed with invalid password")</a></td><td class="numi">1</td><td>1687679933840</td><td class="numi">1819</td></tr>
+<tr class="passedeven"><td>com.railway.test.Login.C62_LoginPageDisplaysAfterClickingOnLoginLinkFromRegisterPage</td><td><a href="#m5"><b>c62_LoginPageDisplaysAfterClickingOnLoginLinkFromRegisterPage</b>  ("TC 15 - Verify Login page displays after clicking on login link from Register page")</a></td><td class="numi">1</td><td>1687679943964</td><td class="numi">1410</td></tr>
+<tr class="passedodd"><td>com.railway.test.Login.C18_LoginSuccessfullyWithValidAccount</td><td><a href="#m6"><b>c18_LoginSuccessfullyWithValidAccount</b>  ("TC 18 - Login successfully with valid account")</a></td><td class="numi">1</td><td>1687679923092</td><td class="numi">2420</td></tr>
+<tr class="passedeven"><td>com.railway.test.Login.C21_LoginFailedWithBlankEmailField</td><td><a href="#m7"><b>c21_LoginFailedWithBlankEmailField</b>  ("TC 21 - Verify user login failed with blank email field")</a></td><td class="numi">1</td><td>1687679938897</td><td class="numi">1772</td></tr>
+<tr class="passedodd"><td>com.railway.test.Login.C19_LoginFailedWithAccountThatNotExisted</td><td><a href="#m8"><b>c19_LoginFailedWithAccountThatNotExisted</b>  ("TC 19 - Login failed with account that not existed")</a></td><td class="numi">1</td><td>1687679928876</td><td class="numi">1841</td></tr>
+<tr class="passedeven"><td>com.railway.test.Login.C69_LoginFailedWithBlankPasswordField</td><td><a href="#m9"><b>c69_LoginFailedWithBlankPasswordField</b>  ("TC 69 - Verify user login failed with blank password field")</a></td><td class="numi">1</td><td>1687679948628</td><td class="numi">1747</td></tr>
 </table>
 <h1>Login_run</h1>
-<h2 id="m1">com.railway.test.Login.C19_LoginWithAccountThatNotExisted:c19_LoginWithAccountThatNotExisted</h2>
+<h2 id="m1">com.railway.test.Login.C17_TheWelcomeTextDisplaysCorrectlyInHeaderWithLoggedUser:c17_TheWelcomeTextDisplaysCorrectlyInHeaderWithLoggedUser</h2>
 <div>
-<div class="stacktrace">java.lang.AssertionError: expected [Welcome guest] but found []
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1577)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:655)
-	at org.testng.Assert.assertEquals(Assert.java:665)
-	at com.railway.test.Login.C19_LoginWithAccountThatNotExisted.c19_LoginWithAccountThatNotExisted(C19_LoginWithAccountThatNotExisted.java:26)
+<div class="stacktrace">java.lang.AssertionError: expected [Welcome abbbb543544@gmail.com] but found []
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.railway.test.Login.C17_TheWelcomeTextDisplaysCorrectlyInHeaderWithLoggedUser.c17_TheWelcomeTextDisplaysCorrectlyInHeaderWithLoggedUser(C17_TheWelcomeTextDisplaysCorrectlyInHeaderWithLoggedUser.java:36)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
 </div>
 </div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">com.railway.test.Login.C15_LoginPageStillDisplaysWhenClickingOnBookTicketpageWithUnloggedUser:c15_LoginPageStillDisplaysWhenClickingOnBookTicketpageWithUnloggedUser</h2>
+<h2 id="m2">com.railway.test.Login.C15_LoginPageStillDisplaysWhenClickingOnBookTicketTabWithUnloggedUser:c15_LoginPageStillDisplaysWhenClickingOnBookTicketTabWithUnloggedUser</h2>
 <div>
 <div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)&quot; because &quot;com.railway.constant.Constant.WEBDRIVER&quot; is null
 	at com.railway.pageObjects.BasePage.getTab(BasePage.java:15)
 	at com.railway.pageObjects.BasePage.clickTab(BasePage.java:31)
-	at com.railway.test.Login.C15_LoginPageStillDisplaysWhenClickingOnBookTicketpageWithUnloggedUser.c15_LoginPageStillDisplaysWhenClickingOnBookTicketpageWithUnloggedUser(C15_LoginPageStillDisplaysWhenClickingOnBookTicketpageWithUnloggedUser.java:15)
+	at com.railway.test.Login.C15_LoginPageStillDisplaysWhenClickingOnBookTicketTabWithUnloggedUser.c15_LoginPageStillDisplaysWhenClickingOnBookTicketTabWithUnloggedUser(C15_LoginPageStillDisplaysWhenClickingOnBookTicketTabWithUnloggedUser.java:13)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
 </div>
 </div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">com.railway.test.Login.C17_TheWelcomeTextDisplaysCorrectlyInHeaderWithLoggedUser:c17_TheWelcomeTextDisplaysCorrectlyInHeaderWithLoggedUser</h2>
-<div>
-<div class="stacktrace">java.lang.AssertionError: expected [Welcome abbbb543544@gmail.com] but found []
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1577)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:655)
-	at org.testng.Assert.assertEquals(Assert.java:665)
-	at com.railway.test.Login.C17_TheWelcomeTextDisplaysCorrectlyInHeaderWithLoggedUser.c17_TheWelcomeTextDisplaysCorrectlyInHeaderWithLoggedUser(C17_TheWelcomeTextDisplaysCorrectlyInHeaderWithLoggedUser.java:19)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
-</div>
-</div>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">com.railway.test.Login.C20_LoginWithInvalidPassword:LoginWithInvalidPassword</h2>
-<div>
-<div class="stacktrace">java.lang.AssertionError: expected [Welcome guest] but found []
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1577)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:655)
-	at org.testng.Assert.assertEquals(Assert.java:665)
-	at com.railway.test.Login.C20_LoginWithInvalidPassword.LoginWithInvalidPassword(C20_LoginWithInvalidPassword.java:31)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
-</div>
-</div>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m5">com.railway.test.Login.C16_TheWelcomeTextDisplaysInHeaderWithUnloggedUser:c16_TheWelcomeGuestTextDisplaysInHeaderWithUnloggedUser</h2>
+<h2 id="m3">com.railway.test.Login.C16_TheWelcomeTextDisplaysInHeaderWithUnloggedUser:c16_TheWelcomeGuestTextDisplaysInHeaderWithUnloggedUser</h2>
 <div>
 <div class="stacktrace">java.lang.AssertionError: expected [Welcome guest!] but found []
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1577)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:655)
-	at org.testng.Assert.assertEquals(Assert.java:665)
-	at com.railway.test.Login.C16_TheWelcomeTextDisplaysInHeaderWithUnloggedUser.c16_TheWelcomeGuestTextDisplaysInHeaderWithUnloggedUser(C16_TheWelcomeTextDisplaysInHeaderWithUnloggedUser.java:12)
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.railway.test.Login.C16_TheWelcomeTextDisplaysInHeaderWithUnloggedUser.c16_TheWelcomeGuestTextDisplaysInHeaderWithUnloggedUser(C16_TheWelcomeTextDisplaysInHeaderWithUnloggedUser.java:13)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
 </div>
 </div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m6">com.railway.test.Login.C21_LoginWithEmptyInformationFields:c21_LoginWithEmptyInformationFields</h2>
-<div>
-<div class="stacktrace">java.lang.AssertionError: expected [Welcome guest] but found []
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1577)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:655)
-	at org.testng.Assert.assertEquals(Assert.java:665)
-	at com.railway.test.Login.C21_LoginWithEmptyInformationFields.c21_LoginWithEmptyInformationFields(C21_LoginWithEmptyInformationFields.java:24)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
-</div>
-</div>
+<h2 id="m4">com.railway.test.Login.C18_LoginSuccessfullyWithValidAccount:c18_LoginSuccessfullyWithValidAccount</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m7">com.railway.test.Login.C18_LoginSuccessfullyWithValidAccount:c18_LoginSuccessfullyWithValidAccount</h2>
+<h2 id="m5">com.railway.test.Login.C19_LoginFailedWithAccountThatNotExisted:c19_LoginFailedWithAccountThatNotExisted</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">com.railway.test.Login.C20_LoginFailedWithInvalidPassword:c20_LoginWithInvalidPassword</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">com.railway.test.Login.C62_LoginPageDisplaysAfterClickingOnLoginLinkFromRegisterPage:c62_LoginPageDisplaysAfterClickingOnLoginLinkFromRegisterPage</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">com.railway.test.Login.C21_LoginFailedWithBlankEmailField:c21_LoginFailedWithBlankEmailField</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m9">com.railway.test.Login.C69_LoginFailedWithBlankPasswordField:c69_LoginFailedWithBlankPasswordField</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

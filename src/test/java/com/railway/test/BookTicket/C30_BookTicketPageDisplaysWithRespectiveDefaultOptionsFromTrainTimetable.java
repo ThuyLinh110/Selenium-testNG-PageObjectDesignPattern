@@ -6,14 +6,17 @@ import com.railway.pageObjects.BookticketPage;
 import com.railway.pageObjects.HomePage;
 import com.railway.pageObjects.LoginPage;
 import com.railway.pageObjects.TimetablePage;
+import com.railway.test.BaseTest;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class C30_BookTicketPageDisplaysWithRespectiveDefaultOptionsFromTrainTimetable {
+import java.util.Base64;
+
+public class C30_BookTicketPageDisplaysWithRespectiveDefaultOptionsFromTrainTimetable extends BaseTest {
     @Test
-    public void c28_BookTicketPageDisplaysWhenClickingOnBookTicketLinksFromTrainTimeTable() {
+    public void c30_BookTicketPageDisplaysWithRespectiveDefaultOptionsFromTrainTimetable() {
 
 //      Excute Testcase
 

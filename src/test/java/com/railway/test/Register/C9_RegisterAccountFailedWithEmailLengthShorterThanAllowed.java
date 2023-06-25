@@ -6,9 +6,9 @@ import com.railway.test.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class C9_RegisterAccountWithInvalidEmailLength extends BaseTest {
+public class C9_RegisterAccountFailedWithEmailLengthShorterThanAllowed extends BaseTest {
     @Test
-    public void c9_RegisterAccountWithInvalidEmailLength() {
+    public void c9_RegisterAccountFailedWithEmailLengthShorterThanAllowed() {
 
         // Invalid email (length > 32)
         homePage.clickTab("Register");

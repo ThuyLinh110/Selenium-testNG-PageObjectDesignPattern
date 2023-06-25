@@ -7,6 +7,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 public class WebElementManager {
     public static void clickToElement(WebElement element){
@@ -32,8 +33,16 @@ public class WebElementManager {
         Constant.WEBDRIVER.navigate().back();
     }
 
-    public static void waitElement(int timeout) throws InterruptedException {
-        Thread.sleep(timeout);
+    public static void waitElement(long timeout)  {
+        try {
+            Thread.sleep(timeout);
+        }
+        catch (Exception e)
+        {
+
+        }
+
+
     }
 
 

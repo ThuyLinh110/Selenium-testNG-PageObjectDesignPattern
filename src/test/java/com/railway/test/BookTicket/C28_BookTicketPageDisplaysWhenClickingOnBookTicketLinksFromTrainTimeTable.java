@@ -26,6 +26,7 @@ public class C28_BookTicketPageDisplaysWhenClickingOnBookTicketLinksFromTrainTim
 
         numberBookTicketLink = timetablePage.getNumberBookTicketLnk();
         for (int i =1; i<= numberBookTicketLink; i++) {
+            timetablePage.clickDynamicBookTicketLink(i);
             Assert.assertEquals(bookticketPage.getNameTitlePage(), "Book ticket");
             bookticketPage.clickTab("Timetable");
         }

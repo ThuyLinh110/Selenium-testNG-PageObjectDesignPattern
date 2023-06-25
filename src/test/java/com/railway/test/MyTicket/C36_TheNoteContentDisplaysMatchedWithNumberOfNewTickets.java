@@ -23,13 +23,13 @@ public class C36_TheNoteContentDisplaysMatchedWithNumberOfNewTickets extends Bas
         homePage.clickTab("My ticket");
         if (!myTicketPage.checkManageTableDisplays()) {
             homePage.clickTab("Book ticket");
-            bookticketPage.FillDataTicket(indexDate,depart,arrive,seat,amount );
+            bookticketPage.fillDataTicket(indexDate,depart,arrive,seat,amount );
             bookticketPage.clickBookTicketBtn();
             bookticketPage.clickTab("My ticket");
         }
         Assert.assertEquals(myTicketPage.getNameTitlePage(), "Manage Tickets");
         numberTicket = myTicketPage.getNumberTicketsByStatusAndHeader("New", "Amount");
-        Assert.assertEquals(myTicketPage.getNoteMessage(), String.format("You currently book %d ticket, you can book %d more.",numberTicket, Constant.ticketQuantity - numberTicket));
+        Assert.assertEquals(myTicketPage.getNoteMessage(), String.format("You currently book %d tickets, you can book %d more.",numberTicket, Constant.ticketQuantity - numberTicket));
 
 
 

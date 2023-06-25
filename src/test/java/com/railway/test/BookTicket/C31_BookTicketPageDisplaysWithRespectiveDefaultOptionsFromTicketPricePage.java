@@ -8,14 +8,15 @@ import com.railway.pageObjects.BookticketPage;
 import com.railway.pageObjects.HomePage;
 import com.railway.pageObjects.LoginPage;
 import com.railway.pageObjects.TicketPricePage;
+import com.railway.test.BaseTest;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class C31_BookTicketPageDisplaysWithRespectiveDefaultOptionsFromTicketPricePage {
+public class C31_BookTicketPageDisplaysWithRespectiveDefaultOptionsFromTicketPricePage extends BaseTest {
     @Test
-    public void TC15() {
+    public void c31_BookTicketPageDisplaysWithRespectiveDefaultOptionsFromTicketPricePage() {
 
 //      Excute Testcase
         Log.info("TC15 - User can open 'Book ticket' page by clicking on 'Book ticket' link in 'Train timetable' page ");

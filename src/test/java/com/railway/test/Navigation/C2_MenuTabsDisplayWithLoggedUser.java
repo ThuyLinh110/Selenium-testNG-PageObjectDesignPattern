@@ -9,9 +9,19 @@ import io.qameta.allure.Allure;
 import org.apache.xmlbeans.impl.xb.xsdschema.All;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class C2_MenuTabsDisplayWithLoggedUser extends BaseTest {
+    @BeforeMethod(description = "Pre-condition")
+    public void setUp() {
+        Allure.step("Pre-condition 1: Get account data for login");
+        JSONArray existedAccountList = JsonUtils.getJSONList(Constant.EXISTED_ACC_DATA_PATH);
+        JSONObject account = JsonUtils.getJSONObjectByIndex(existedAccountList,0);
+        validUserName = account.get("User Name").toString();
+        validPassword = account.get("Password").toString();
+    }
+
     @Test (description = "TC 2 - Verify the Menu tabs display with logged user", alwaysRun = true)
     public void c2_MenuTabsDisplayWithLoggedUser() {
         Allure.step("Step 1: Login Railway");
@@ -43,11 +53,9 @@ public class C2_MenuTabsDisplayWithLoggedUser extends BaseTest {
         homePage.checkTabNotDisplay("Login");
     }
 
-    JSONArray existedAccountList = JsonUtils.getJSONList(Constant.EXISTED_ACC_DATA_PATH);
-    JSONObject account = JsonUtils.getJSONObjectByIndex(existedAccountList,0);
-    String validUserName = account.get("User Name").toString();
-    String validPassword = account.get("Password").toString();
+
     //      PageObject contructor
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
+    String validUserName, validPassword;
 }

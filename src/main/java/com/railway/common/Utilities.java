@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Properties;
+import java.util.stream.Collectors;
 
 public class Utilities {
     public static String getPathProject()
@@ -81,5 +82,10 @@ public class Utilities {
             return false;
         }
     }
+
+    public static List<String> getMatchingValues(List<String> list1, List<String> list2) {
+        return list1.stream().filter(list2::contains).collect(Collectors.toList());
+    }
+
 
 }

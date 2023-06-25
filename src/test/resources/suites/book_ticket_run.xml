@@ -7,10 +7,10 @@
         <classes>
 <!--            <class name="com.railway.test.BookTicket.C28_BookTicketPageDisplaysWhenClickingOnBookTicketLinksFromTrainTimeTable"></class>-->
 <!--            <class name="com.railway.test.BookTicket.C29_BookTicketPageDisplaysWhenClickingOnBookTicketButtonFromTicketPricePage"></class>-->
-<!--            <class name="com.railway.test.BookTicket.C30_BookTicketPageDisplaysWithRespectiveDefaultOptionsFromTrainTimetable"></class>-->
-<!--            <class name="com.railway.test.BookTicket.C31_BookTicketPageDisplaysWithRespectiveDefaultOptionsFromTicketPricePage"></class>-->
+            <class name="com.railway.test.BookTicket.C30_BookTicketPageDisplaysWithRespectiveDefaultOptionsFromTrainTimetable"></class>
+            <class name="com.railway.test.BookTicket.C31_BookTicketPageDisplaysWithRespectiveDefaultOptionsFromTicketPricePage"></class>
 <!--            <class name="com.railway.test.BookTicket.C32_BookTicketPageDisplaysWithCorrectFormatAndData"></class>-->
-            <class name="com.railway.test.BookTicket.C33_BookTicketSuccessfullyWithValidInformations"></class>
+<!--            <class name="com.railway.test.BookTicket.C33_BookTicketSuccessfullyWithValidInformations"></class>-->
 <!--            <class name="com.railway.test.BookTicket.C34_BookTicketWithTotalTicketMoreThanAllowedQuantity"></class>-->
 
         </classes>

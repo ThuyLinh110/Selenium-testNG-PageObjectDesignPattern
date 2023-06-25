@@ -2,7 +2,6 @@ package com.railway.pageObjects;
 
 import com.railway.common.WebElementManager;
 import com.railway.constant.Constant;
-import org.apache.poi.ss.formula.functions.WeekNum;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -51,10 +50,10 @@ public class BookticketPage extends BasePage {
         return Constant.WEBDRIVER.findElement(errorMsg);
     }
 
-    public void FillDataTicket(int indexDate, String depart, String arrive, String seat, String amount)  {
+    public void fillDataTicket(int indexDate, String depart, String arrive, String seat, String amount)  {
         getDateDdl().selectByIndex(indexDate);
         getDepartDdl().selectByVisibleText(depart);
-//        WebElementManager.waitElement(2000);
+        WebElementManager.waitElement(1000);
         getArriveDdl().selectByVisibleText(arrive);
         getSeatTypeDdl().selectByVisibleText(seat);
         getTicketAmountDdl().selectByVisibleText(amount);

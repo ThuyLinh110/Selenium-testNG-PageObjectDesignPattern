@@ -22,7 +22,7 @@ public class C35_TheManageTableDisplaysWithCorrectFormat extends BaseTest {
         homePage.clickTab("My ticket");
         if (!myTicketPage.checkManageTableDisplays()) {
             homePage.clickTab("Book ticket");
-            bookticketPage.FillDataTicket(indexDate,depart,arrive,seat,amount );
+            bookticketPage.fillDataTicket(indexDate,depart,arrive,seat,amount );
             bookticketPage.clickBookTicketBtn();
             bookticketPage.clickTab("My ticket");
         }

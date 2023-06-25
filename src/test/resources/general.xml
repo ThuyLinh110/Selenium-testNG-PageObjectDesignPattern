@@ -5,18 +5,18 @@
         <parameter name="browser" value="chrome"/>
 
         <classes>
-<!--            <class name="com.railway.test.Register.C14_RegisterAccountWithEmptyInformationFields"></class>-->
-<!--            <class name="com.railway.test.Register.C12_RegisterAccountWithEmailAlreadyExisted"></class>-->
-<!--            <class name="com.railway.test.Register.C8_RegisterAccountWithInvalidFormatEmail"></class>-->
-<!--            <class name="com.railway.test.Register.C9_RegisterAccountWithInvalidEmailLength"></class>-->
-<!--            <class name="com.railway.test.Register.C10_RegisterAccountWithInvalidPasswordLength"></class>-->
-<!--            <class name="com.railway.test.Register.C11_RegisterAccountWithInvalidPIDLength"></class>-->
-<!--            <class name="com.railway.test.Register.C13_RegisterAccountWithPasswordAndConfirmPasswordThatNotMatched"></class>-->
+<!--            <class name="com.railway.test.Register.C14_RegisterAccountFailedWithBlankEmailField"></class>-->
+<!--            <class name="com.railway.test.Register.C12_RegisterAccountFailedWithEmailAlreadyExisted"></class>-->
+<!--            <class name="com.railway.test.Register.C8_RegisterAccountFailedWithInvalidFormatEmail"></class>-->
+<!--            <class name="com.railway.test.Register.C9_RegisterAccountFailedWithEmailLengthShorterThanAllowed"></class>-->
+<!--            <class name="com.railway.test.Register.C10_RegisterAccountFailedWithPasswordLengthShorterThanAllowed"></class>-->
+<!--            <class name="com.railway.test.Register.C11_RegisterAccountFailedWithPIDLengthShorterThanAllowed"></class>-->
+<!--            <class name="com.railway.test.Register.C13_RegisterAccountFailedWithPasswordAndConfirmPasswordThatNotMatched"></class>-->
 <!--            <class name="com.railway.test.Register.C7_RegisterAccountSuccessfullyWithValidInformation"></class>-->
 
-<!--            <class name="com.railway.test.Login.C19_LoginWithAccountThatNotExisted"></class>-->
-<!--            <class name="com.railway.test.Login.C20_LoginWithInvalidPassword"></class>-->
-<!--            <class name="com.railway.test.Login.C21_LoginWithEmptyInformationFields"></class>-->
+<!--            <class name="com.railway.test.Login.C19_LoginFailedWithAccountThatNotExisted"></class>-->
+<!--            <class name="com.railway.test.Login.C20_LoginFailedWithInvalidPassword"></class>-->
+<!--            <class name="com.railway.test.Login.C21_LoginFailedWithBlankEmailField"></class>-->
 <!--            <class name="com.railway.test.Login.LoginWithBlankPassword"></class>-->
 <!--            <class name="com.railway.test.Login.C18_LoginSuccessfullyWithValidAccount"></class>-->
             

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="Navigation_run">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.railway.test.Navigation.C1_MenuTabsDisplayWithUnloggedUser"></class>
+            <class name="com.railway.test.Navigation.C2_MenuTabsDisplayWithLoggedUser"></class>
+            <class name="com.railway.test.Navigation.C4_RespectivePageDisplaysAfterClickingOnMenuTab"></class>
+        </classes>
+    </test>
+</suite>

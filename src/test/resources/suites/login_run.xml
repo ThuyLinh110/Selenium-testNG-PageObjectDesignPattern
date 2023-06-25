@@ -5,13 +5,16 @@
         <parameter name="browser" value="chrome"/>
 
         <classes>
-            <class name="com.railway.test.Login.C15_LoginPageStillDisplaysWhenClickingOnBookTicketpageWithUnloggedUser"></class>
+            <class name="com.railway.test.Login.C15_LoginPageStillDisplaysWhenClickingOnBookTicketTabWithUnloggedUser"></class>
             <class name="com.railway.test.Login.C16_TheWelcomeTextDisplaysInHeaderWithUnloggedUser"></class>
             <class name="com.railway.test.Login.C17_TheWelcomeTextDisplaysCorrectlyInHeaderWithLoggedUser"></class>
             <class name="com.railway.test.Login.C18_LoginSuccessfullyWithValidAccount"></class>
-            <class name="com.railway.test.Login.C19_LoginWithAccountThatNotExisted"></class>
-            <class name="com.railway.test.Login.C20_LoginWithInvalidPassword"></class>
-            <class name="com.railway.test.Login.C21_LoginWithEmptyInformationFields"></class>
+            <class name="com.railway.test.Login.C19_LoginFailedWithAccountThatNotExisted"></class>
+            <class name="com.railway.test.Login.C20_LoginFailedWithInvalidPassword"></class>
+            <class name="com.railway.test.Login.C21_LoginFailedWithBlankEmailField"></class>
+            <class name="com.railway.test.Login.C62_LoginPageDisplaysAfterClickingOnLoginLinkFromRegisterPage"></class>
+            <class name="com.railway.test.Login.C69_LoginFailedWithBlankPasswordField"></class>
+
         </classes>
     </test>
 </suite>

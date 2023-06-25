@@ -17,6 +17,8 @@ public class RegisterPage extends BasePage {
     private By errorPIDLabel = By.xpath("//li[@class='pid-number']//label[@class='validation-error']");
     private By registerSuccessLabel = By.xpath("//div[@id = 'content']/p");
 
+    private By loginLink = By.xpath("//div[@id='content']//a[contains(@href, 'Login')]");
+
 
     private WebElement getEmailTxt() {
         return Constant.WEBDRIVER.findElement(emailTxt);
@@ -62,6 +64,10 @@ public class RegisterPage extends BasePage {
         return Constant.WEBDRIVER.findElement(registerSuccessLabel);
     }
 
+    private WebElement getLoginLink() {
+        return Constant.WEBDRIVER.findElement(loginLink);
+    }
+
 
     public void FillData(String email, String password, String confirmPassword, String pid) {
         getEmailTxt().sendKeys(email);
@@ -79,6 +85,10 @@ public class RegisterPage extends BasePage {
         FillData(email, password, confirmPassword, pid);
         clickBtnRegister();
     }
+    public void clickLoginLink() {
+        WebElementManager.clickToElement(getLoginLink());
+    }
+
 
     public String getMessageSuccess() {
         return getMsgRegisterSuccess().getText();
