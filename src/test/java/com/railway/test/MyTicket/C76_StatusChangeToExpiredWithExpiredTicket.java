@@ -7,7 +7,6 @@ import com.railway.pageObjects.BookticketPage;
 import com.railway.pageObjects.HomePage;
 import com.railway.pageObjects.LoginPage;
 import com.railway.pageObjects.MyTicketPage;
-import com.railway.test.BaseTest;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
@@ -20,8 +19,7 @@ import org.testng.annotations.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-public class C37_TicketsAreExpired1DayBeforeDeparting extends BaseTest {
-
+public class C76_StatusChangeToExpiredWithExpiredTicket {
     @BeforeMethod(description = "Pre-condition", alwaysRun = true)
     public void setUp(){
         Allure.step("Pre-condition 1: Get data from existed account for logging");
@@ -39,9 +37,9 @@ public class C37_TicketsAreExpired1DayBeforeDeparting extends BaseTest {
         seat = ticket.get("Seat").toString();
         amount = ticket.get("Amount").toString();
     }
-    @Test(description = "TC 37 - Verify the tickets are expired 1 day before departing")
+    @Test(description = "TC ")
     @Severity(SeverityLevel.CRITICAL)
-    public void c37_TicketsAreExpired1DayBeforeDeparting() {
+    public void c76_StatusChangeToExpiredWithExpiredTicket() {
         Allure.step("Step 1: Navigate to Login page");
         homePage.clickTab("Login");
 

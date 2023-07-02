@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="Login_run">
+    <test verbose="2" preserve-order="true" name="Login_run_CHROME">
         <parameter name="browser" value="chrome"/>
 
         <classes>
@@ -15,6 +15,22 @@
             <class name="com.railway.test.Login.C62_LoginPageDisplaysAfterClickingOnLoginLinkFromRegisterPage"></class>
             <class name="com.railway.test.Login.C69_LoginFailedWithBlankPasswordField"></class>
 
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="Login_run_EDGE">
+        <parameter name="browser" value="edge"/>
+
+        <classes>
+            <class name="com.railway.test.Login.C15_LoginPageStillDisplaysWhenClickingOnBookTicketTabWithUnloggedUser"></class>
+            <class name="com.railway.test.Login.C16_TheWelcomeTextDisplaysInHeaderWithUnloggedUser"></class>
+            <class name="com.railway.test.Login.C17_TheWelcomeTextDisplaysCorrectlyInHeaderWithLoggedUser"></class>
+            <class name="com.railway.test.Login.C18_LoginSuccessfullyWithValidAccount"></class>
+            <class name="com.railway.test.Login.C19_LoginFailedWithAccountThatNotExisted"></class>
+            <class name="com.railway.test.Login.C20_LoginFailedWithInvalidPassword"></class>
+            <class name="com.railway.test.Login.C21_LoginFailedWithBlankEmailField"></class>
+            <class name="com.railway.test.Login.C62_LoginPageDisplaysAfterClickingOnLoginLinkFromRegisterPage"></class>
+            <class name="com.railway.test.Login.C69_LoginFailedWithBlankPasswordField"></class>
         </classes>
     </test>
 </suite>

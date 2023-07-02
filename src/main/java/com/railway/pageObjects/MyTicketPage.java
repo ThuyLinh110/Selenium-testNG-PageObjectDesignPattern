@@ -25,7 +25,7 @@ public class MyTicketPage extends BasePage{
     private By dateFilter = By.name("FilterDpDate");
     private String filterByHeader = "//div[@class='Filter']//td[count(//div[@class='Filter']//th[.='%s']/preceding-sibling::th)+1]//select";
     private By applyFilterButton = By.xpath("//input[@type='submit']");
-
+    private By filterHeaders = By.xpath("//div[@class='Filter']//th");
 
 
     private WebElement getBtnCancelByValueNo(String no){
@@ -79,6 +79,9 @@ public class MyTicketPage extends BasePage{
     }
     private WebElement getApplyFilterButton() {
         return Constant.WEBDRIVER.findElement(applyFilterButton);
+    }
+    private List<WebElement> getFilterHeaders() {
+        return Constant.WEBDRIVER.findElements(filterHeaders);
     }
 
 
@@ -245,6 +248,14 @@ public class MyTicketPage extends BasePage{
             return false;
         }
         return true;
+    }
+    public List<String> getFilterHeaderList() {
+        List<WebElement> valueElementList = getFilterHeaders();
+        List<String> ticketValueList = new ArrayList<>();
+        for (WebElement value: valueElementList) {
+            ticketValueList.add(value.getText());
+        }
+        return ticketValueList;
     }
 
 

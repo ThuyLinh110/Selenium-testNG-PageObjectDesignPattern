@@ -4,11 +4,14 @@ import com.railway.pageObjects.HomePage;
 import com.railway.pageObjects.LoginPage;
 import com.railway.test.BaseTest;
 import io.qameta.allure.Allure;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class C21_LoginFailedWithBlankEmailField extends BaseTest {
     @Test(description = "TC 21 - Verify user login failed with blank email field")
+    @Severity(SeverityLevel.CRITICAL)
     public void c21_LoginFailedWithBlankEmailField() {
         Allure.step("Step 1: Navigate to Login page");
         homePage.clickTab("Login");

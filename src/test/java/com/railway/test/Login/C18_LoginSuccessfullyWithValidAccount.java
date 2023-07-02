@@ -8,6 +8,8 @@ import com.railway.pageObjects.LoginPage;
 import com.railway.pageObjects.MyTicketPage;
 import com.railway.test.BaseTest;
 import io.qameta.allure.Allure;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
@@ -15,7 +17,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class C18_LoginSuccessfullyWithValidAccount extends BaseTest {
-
     @BeforeMethod(description = "Pre-condition")
     public void setUp() {
         Allure.step("Pre-condition 1: Get account data for login");
@@ -25,6 +26,7 @@ public class C18_LoginSuccessfullyWithValidAccount extends BaseTest {
         validPassword = account.get("Password").toString();
     }
     @Test(description = "TC 18 - Login successfully with valid account")
+    @Severity(SeverityLevel.CRITICAL)
     public void c18_LoginSuccessfullyWithValidAccount() {
         Allure.step("Step 1: Navigate to Login page");
         homePage.clickTab("Login");

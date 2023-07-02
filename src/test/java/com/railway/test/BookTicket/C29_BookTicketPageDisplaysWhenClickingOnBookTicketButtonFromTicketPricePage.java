@@ -6,14 +6,25 @@ import com.railway.common.Utilities;
 import com.railway.constant.Constant;
 import com.railway.pageObjects.*;
 import com.railway.test.BaseTest;
+import io.qameta.allure.Allure;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class C29_BookTicketPageDisplaysWhenClickingOnBookTicketButtonFromTicketPricePage extends BaseTest {
-    @Test
-    public void TC15() {
+
+    @BeforeMethod(description = "Pre-condition")
+    public void setUp() {
+        Allure.step("Pre-condition 1: Get account data for login");
+        existedAccountList = JsonUtils.getJSONList(Constant.EXISTED_ACC_DATA_PATH);
+        account = JsonUtils.getJSONObjectByIndex(existedAccountList,0);
+        validUserName = account.get("User Name").toString();
+        validPassword = account.get("Password").toString();
+    }
+    @Test(description = "TC 29 - Verify the Book Ticket page displays when clicking on 'Book Ticket' button from Ticket Price page")
+    public void c29_BookTicketPageDisplaysWhenClickingOnBookTicketButtonFromTicketPricePage() {
 
 //      Excute Testcase
 
@@ -38,10 +49,10 @@ public class C29_BookTicketPageDisplaysWhenClickingOnBookTicketButtonFromTicketP
 
     }
     //      Load data from *.json
-    JSONArray existedAccountList = JsonUtils.getJSONList(Constant.EXISTED_ACC_DATA_PATH);
-    JSONObject account = JsonUtils.getJSONObjectByIndex(existedAccountList,0);
-    String validUserName = account.get("User Name").toString();
-    String validPassword = account.get("Password").toString();
+    JSONArray existedAccountList ;
+    JSONObject account ;
+    String validUserName ;
+    String validPassword ;
 
     //      Object constructor
     HomePage homePage = new HomePage();

@@ -6,6 +6,8 @@ import com.railway.pageObjects.HomePage;
 import com.railway.pageObjects.LoginPage;
 import com.railway.test.BaseTest;
 import io.qameta.allure.Allure;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.apache.xmlbeans.impl.xb.xsdschema.All;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -25,6 +27,7 @@ public class C20_LoginFailedWithInvalidPassword extends BaseTest {
     }
 
     @Test(description = "TC 20 - Login failed with invalid password")
+    @Severity(SeverityLevel.CRITICAL)
     public void c20_LoginWithInvalidPassword() {
 
         Allure.step("Step 1: Navigate to Login page");

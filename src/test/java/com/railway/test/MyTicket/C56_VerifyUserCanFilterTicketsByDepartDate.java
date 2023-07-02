@@ -8,6 +8,8 @@ import com.railway.pageObjects.LoginPage;
 import com.railway.pageObjects.MyTicketPage;
 import com.railway.test.BaseTest;
 import io.qameta.allure.Allure;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
@@ -89,25 +91,33 @@ public class C56_VerifyUserCanFilterTicketsByDepartDate extends BaseTest {
 
 
     @Test
+    @Severity(SeverityLevel.CRITICAL)
     public void c56_VerifyUserCanFilterTicketsByDepartDate() {
         ticketValuesByHeader=  myTicketPage.getUniqueValuesByHeader("Depart Date");
         randomDate = ticketValuesByHeader.get(0);
 
         int numberTicketByDepartValue = myTicketPage.getTicketsByFilter("", "","","");
 
+        Allure.step("Step 1: Enter only Depart Date with empty data  ");
         myTicketPage.fillDataFilter(null,null, "", null);
+
+        Allure.step("Step 2: Click Apply Filter button ");
         myTicketPage.clickApplyFilterButton();
 
         int numberTicketByFilter = myTicketPage.numberTicketRecord();
+        Allure.step("Step 3: Verify all ticket records displays ");
         Assert.assertEquals(numberTicketByFilter, numberTicketByDepartValue);
 
 
         numberTicketByDepartValue = myTicketPage.getTicketsByFilter("", "",randomDate,"");
-
+        Allure.step(String.format("Step 4: Enter only Depart Date with '%s'  ",randomDate));
         myTicketPage.fillDataFilter(null,null, randomDate, null);
+
+        Allure.step("Step 5: Click Apply Filter button ");
         myTicketPage.clickApplyFilterButton();
 
         numberTicketByFilter = myTicketPage.numberTicketRecord();
+        Allure.step(String.format("Step 6: Verify all ticket records having Depart Date = '%s' display",randomDate));
         Assert.assertEquals(numberTicketByFilter, numberTicketByDepartValue);
 
     }
@@ -127,6 +137,6 @@ public class C56_VerifyUserCanFilterTicketsByDepartDate extends BaseTest {
     int indexDate ;
     String depart, arrive, seat ;
     int numberTicket, numberTicketRecord;
-    String randomDepart, randomArrive, randomStatus, randomDate;
+    String randomDate;
     List<String> ticketValuesByHeader;
 }

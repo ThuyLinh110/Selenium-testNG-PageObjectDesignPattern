@@ -8,6 +8,8 @@ import com.railway.pageObjects.LoginPage;
 import com.railway.pageObjects.MyTicketPage;
 import com.railway.test.BaseTest;
 import io.qameta.allure.Allure;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
@@ -85,6 +87,7 @@ public class C58_VerifyUserCanFilterTicketsByTheCombinationHeaders extends BaseT
 
 
     @Test
+    @Severity(SeverityLevel.CRITICAL)
     public void c58_VerifyUserCanFilterTicketsByTheCombinationHeaders() {
 
         firstDepart = myTicketPage.getFirstTicketValueByHeader("Depart Station");

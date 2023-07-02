@@ -9,6 +9,8 @@ import com.railway.pageObjects.LoginPage;
 import com.railway.pageObjects.MyTicketPage;
 import com.railway.test.BaseTest;
 import io.qameta.allure.Allure;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
@@ -90,6 +92,7 @@ public class C55_VerifyUserCanFilterTicketsByArriveStation extends BaseTest {
 
 
     @Test
+    @Severity(SeverityLevel.CRITICAL)
     public void c55_VerifyUserCanFilterTicketsByArriveStation() {
         ticketValuesByHeader=  myTicketPage.getUniqueValuesByHeader("Arrive Station");
         filterValuesByHeader = myTicketPage.getUniqueValuesFilterByHeader("Arrive Station");
@@ -98,19 +101,27 @@ public class C55_VerifyUserCanFilterTicketsByArriveStation extends BaseTest {
 
         int numberTicketByDepartValue = myTicketPage.getTicketsByFilter("", "","","");
 
+        Allure.step("Step 1: Select only Arrive Station with 'Ignore' option ");
         myTicketPage.fillDataFilter(null,"Ignore", null, null);
+
+        Allure.step("Step 2: Click Apply Filter button ");
         myTicketPage.clickApplyFilterButton();
 
         int numberTicketByFilter = myTicketPage.numberTicketRecord();
+        Allure.step("Step 3: Verify all ticket records displays ");
         Assert.assertEquals(numberTicketByFilter, numberTicketByDepartValue);
 
 
         numberTicketByDepartValue = myTicketPage.getTicketsByFilter("", randomArrive,"","");
 
+        Allure.step(String.format("Step 4: Select only Arrive Station with '%s' option ",randomArrive));
         myTicketPage.fillDataFilter(null,randomArrive, null, null);
+
+        Allure.step("Step 5: Click Apply Filter button ");
         myTicketPage.clickApplyFilterButton();
 
         numberTicketByFilter = myTicketPage.numberTicketRecord();
+        Allure.step(String.format("Step 6: Verify all ticket records having Arrive Station = '%s' display",randomArrive));
         Assert.assertEquals(numberTicketByFilter, numberTicketByDepartValue);
 
     }

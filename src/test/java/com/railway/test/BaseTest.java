@@ -6,6 +6,7 @@ import com.railway.constant.Constant;
 import org.apache.log4j.xml.DOMConfigurator;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 
 public class BaseTest {
@@ -16,7 +17,6 @@ public class BaseTest {
         DriverManager.openBrowser(browserType);
         DriverManager.maximizePage();
         DriverManager.openPageByUrl(Constant.RAILWAY_URL);
-//        DOMConfigurator.configure(Utilities.getPathProject()+ "\\log4j.xml");
 
     }
     @AfterMethod

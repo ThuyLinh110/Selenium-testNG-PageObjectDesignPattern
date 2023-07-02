@@ -9,6 +9,8 @@ import com.railway.pageObjects.LoginPage;
 import com.railway.pageObjects.MyTicketPage;
 import com.railway.test.BaseTest;
 import io.qameta.allure.Allure;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
@@ -89,6 +91,7 @@ public class C57_VerifyUserCanFilterTicketsByStatus extends BaseTest {
 
 
     @Test
+    @Severity(SeverityLevel.CRITICAL)
     public void c57_VerifyUserCanFilterTicketsByStatus() {
         ticketValuesByHeader=  myTicketPage.getUniqueValuesByHeader("Status");
         filterValuesByHeader = myTicketPage.getUniqueValuesFilterByHeader("Status");
@@ -97,19 +100,25 @@ public class C57_VerifyUserCanFilterTicketsByStatus extends BaseTest {
 
         int numberTicketByDepartValue = myTicketPage.getTicketsByFilter("", "","","");
 
+        Allure.step("Step 1: Select only Status with 'Ignore' option ");
         myTicketPage.fillDataFilter(null,null, null, "Ignore");
+
+        Allure.step("Step 2: Click Apply Filter button ");
         myTicketPage.clickApplyFilterButton();
 
         int numberTicketByFilter = myTicketPage.numberTicketRecord();
+        Allure.step("Step 3: Verify all ticket records displays ");
         Assert.assertEquals(numberTicketByFilter, numberTicketByDepartValue);
 
 
         numberTicketByDepartValue = myTicketPage.getTicketsByFilter("", "","",randomStatus);
-
+        Allure.step(String.format("Step 4: Select only Status with '%s' option ",randomStatus));
         myTicketPage.fillDataFilter(null,null, null, randomStatus);
+        Allure.step("Step 5: Click Apply Filter button ");
         myTicketPage.clickApplyFilterButton();
 
         numberTicketByFilter = myTicketPage.numberTicketRecord();
+        Allure.step(String.format("Step 6: Verify all ticket records having Status = '%s' display",randomStatus));
         Assert.assertEquals(numberTicketByFilter, numberTicketByDepartValue);
 
     }

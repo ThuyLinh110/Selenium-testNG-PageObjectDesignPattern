@@ -10,6 +10,8 @@ public class Constant {
     public static final String NEW_ACC_DATA_PATH  =  Utilities.getPathProject()+"/src/main/java/com/railway/dataObjects/NewAccountData.json";
     public static final String EXISTED_ACC_DATA_PATH  =  Utilities.getPathProject()+"/src/main/java/com/railway/dataObjects/ExistedAccountData.json";
     public static int ticketQuantity = 10;
+    public static final String EXTEND_REPORT_PATH  =  Utilities.getPathProject()+"src/test/resources/reports";
+
 
 
 }

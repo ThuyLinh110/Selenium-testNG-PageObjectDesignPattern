@@ -7,9 +7,13 @@ import com.railway.pageObjects.HomePage;
 import com.railway.pageObjects.LoginPage;
 import com.railway.pageObjects.MyTicketPage;
 import com.railway.test.BaseTest;
+import io.qameta.allure.Allure;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import jdk.jfr.Description;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
@@ -17,16 +21,39 @@ import java.util.List;
 
 public class C40_CancelNewTicket extends BaseTest {
 
+    @BeforeMethod(description = "Pre-condition", alwaysRun = true)
+    public void setUp(){
+        Allure.step("Pre-condition 1: Get data from existed account for logging");
+        existedAccountList = JsonUtils.getJSONList(Constant.EXISTED_ACC_DATA_PATH);
+        account = JsonUtils.getJSONObjectByIndex(existedAccountList,0);
+        validUserName = account.get("User Name").toString();
+        validPassword = account.get("Password").toString();
+
+        Allure.step("Pre-condition 2: Get ticket account for booking if need");
+        ticketList = JsonUtils.getJSONList(Constant.BOOKTICKET_DATA_PATH);
+        ticket = JsonUtils.getJSONObjectByIndex(ticketList,0);
+        indexDate = Integer.parseInt(ticket.get("Date index").toString());
+        depart = ticket.get("Depart Station").toString();
+        arrive = ticket.get("Arrive Station").toString();
+        seat = ticket.get("Seat").toString();
+        amount = ticket.get("Amount").toString();
+    }
+
+    @Test(description = "TC 40 - Verify user can cancel the new ticket successfully")
+    @Severity(SeverityLevel.CRITICAL)
+
     public void c40_CancelNewTicket() {
         indexRow = "1";
+        Allure.step("Step 1: Login Railway");
         homePage.clickTab("Login");
-        loginPage.fillData(validUserName, validPassword);
-        loginPage.clickBtnLogin();
+        loginPage.login(validUserName, validPassword);
 
-        loginPage.clickTab("Book ticket");
+        Allure.step("Step 2: Navigate to My ticket page");
+        loginPage.clickTab("My ticket");
 
-
+        int i=2;
         if (!myTicketPage.checkManageTableDisplays() || !myTicketPage.checkOperationButtonDisplays("New")) {
+            Allure.step(String.format("Step %d: Book ticket if haven't ticket that already booked", ++i));
             homePage.clickTab("Book ticket");
             bookticketPage.fillDataTicket(indexDate,depart,arrive,seat,amount );
             bookticketPage.clickBookTicketBtn();
@@ -34,7 +61,11 @@ public class C40_CancelNewTicket extends BaseTest {
         }
 
         String idBtnCancel = myTicketPage.getIdOfBtnCancel(indexRow);
+
+        Allure.step(String.format("Step %d: Click Cancel button of ticket has No.= %d", ++i, indexRow));
         myTicketPage.cancelTicketByValueNo(indexRow);
+
+        Allure.step(String.format("Step %d: Verify the canceled ticket disappears", ++i));
         myTicketPage.checkCancelTicket(idBtnCancel);
 
     }
@@ -44,19 +75,17 @@ public class C40_CancelNewTicket extends BaseTest {
     LoginPage loginPage = new LoginPage();
     BookticketPage bookticketPage = new BookticketPage();
 
-    JSONArray existedAccountList = JsonUtils.getJSONList(Constant.EXISTED_ACC_DATA_PATH);
-    JSONObject account = JsonUtils.getJSONObjectByIndex(existedAccountList,0);
-    String validUserName = account.get("User Name").toString();
-    String validPassword = account.get("Password").toString();
-    List<String> newTicketList = new ArrayList<>();
+    JSONArray existedAccountList ;
+    JSONObject account ;
+    String validUserName ;
+    String validPassword ;
 
-
-    JSONArray ticketList = JsonUtils.getJSONList(Constant.BOOKTICKET_DATA_PATH);
-    JSONObject ticket = JsonUtils.getJSONObjectByIndex(ticketList,0);
-    int indexDate = Integer.parseInt(ticket.get("Date index").toString());
-    String depart = ticket.get("Depart Station").toString();
-    String arrive = ticket.get("Arrive Station").toString();
-    String seat = ticket.get("Seat").toString();
-    String amount = ticket.get("Amount").toString();
+    JSONArray ticketList ;
+    JSONObject ticket ;
+    int indexDate ;
+    String depart ;
+    String arrive ;
+    String seat ;
+    String amount ;
     String indexRow ;
 }

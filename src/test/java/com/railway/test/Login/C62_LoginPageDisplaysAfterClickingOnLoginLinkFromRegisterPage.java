@@ -6,6 +6,8 @@ import com.railway.pageObjects.LoginPage;
 import com.railway.pageObjects.RegisterPage;
 import com.railway.test.BaseTest;
 import io.qameta.allure.Allure;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.apache.xmlbeans.impl.xb.xsdschema.All;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -13,6 +15,7 @@ import org.testng.annotations.Test;
 public class C62_LoginPageDisplaysAfterClickingOnLoginLinkFromRegisterPage extends BaseTest {
 
     @Test (description = "TC 15 - Verify Login page displays after clicking on login link from Register page", alwaysRun = true)
+    @Severity(SeverityLevel.NORMAL)
     public void c62_LoginPageDisplaysAfterClickingOnLoginLinkFromRegisterPage() {
         Allure.step("Step 1: Navigate to Register page");
         homePage.clickTab("Register");

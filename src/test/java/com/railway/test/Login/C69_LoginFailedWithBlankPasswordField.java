@@ -4,11 +4,14 @@ import com.railway.pageObjects.HomePage;
 import com.railway.pageObjects.LoginPage;
 import com.railway.test.BaseTest;
 import io.qameta.allure.Allure;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class C69_LoginFailedWithBlankPasswordField extends BaseTest {
     @Test(description = "TC 69 - Verify user login failed with blank password field")
+    @Severity(SeverityLevel.CRITICAL)
     public void c69_LoginFailedWithBlankPasswordField() {
         Allure.step("Step 1: Navigate to Login page");
         homePage.clickTab("Login");

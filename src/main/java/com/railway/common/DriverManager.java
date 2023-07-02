@@ -3,6 +3,7 @@ package com.railway.common;
 
 import com.railway.constant.Constant;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 public class DriverManager {
     public static void openBrowser(String browserType){
@@ -15,6 +16,10 @@ public class DriverManager {
                 System.setProperty("webdriver.chrome.driver", Utilities.getPathProject() + "\\src\\main\\java\\com\\railway\\excutables\\chromedriver.exe");
                 Constant.WEBDRIVER = new ChromeDriver();
                 break;
+//            case "edge":
+//                System.setProperty("webdriver.edge.driver", Utilities.getPathProject() + "\\src\\main\\java\\com\\railway\\excutables\\msedgedriver.exe");
+//                Constant.WEBDRIVER = new EdgeDriver();
+//                break;
             default:
                 break;
         }

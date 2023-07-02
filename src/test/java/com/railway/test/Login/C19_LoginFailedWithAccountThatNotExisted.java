@@ -4,11 +4,14 @@ import com.railway.pageObjects.HomePage;
 import com.railway.pageObjects.LoginPage;
 import com.railway.test.BaseTest;
 import io.qameta.allure.Allure;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class C19_LoginFailedWithAccountThatNotExisted extends BaseTest {
     @Test(description = "TC 19 - Login failed with account that not existed")
+    @Severity(SeverityLevel.CRITICAL)
     public void c19_LoginFailedWithAccountThatNotExisted() {
         Allure.step("Step 1: Click Login menu tab");
         homePage.clickTab("Login");
@@ -42,6 +45,5 @@ public class C19_LoginFailedWithAccountThatNotExisted extends BaseTest {
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
     String expectedMsg = "Invalid username or password. Please try again.";
-    String getExpectedWelcomeMsg = "Welcome guest";
 
 }

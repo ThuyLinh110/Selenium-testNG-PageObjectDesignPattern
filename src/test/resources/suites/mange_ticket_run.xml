@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="Manage_Ticket_run">
+    <test verbose="2" preserve-order="true" name="Test result of Manage Ticket function in Chrome Browser">
         <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.railway.test.MyTicket.C35_TheManageTableDisplaysWithCorrectFormat"></class>
+            <class name="com.railway.test.MyTicket.C36_TheNoteContentDisplaysMatchedWithNumberOfNewTickets"></class>
+            <class name="com.railway.test.MyTicket.C37_TicketsAreExpired1DayBeforeDeparting"></class>
+            <class name="com.railway.test.MyTicket.C38_DeleteButtonDisplaysForExpiredTicket"></class>
+            <class name="com.railway.test.MyTicket.C39_CancelButtonDisplaysForNewTicket"></class>
+            <class name="com.railway.test.MyTicket.C40_CancelNewTicket"></class>
+            <class name="com.railway.test.MyTicket.C41_DeleteTheExpiredTicket"></class>
+            <class name="com.railway.test.MyTicket.C42_VerifyTheBookedTicketDisplaysImmediatelyInMyTicketTableAfterBookedSuccessfully"></class>
+            <class name="com.railway.test.MyTicket.C51_VerifyTheFIlterAppearsWhenTheNumberTicketRecordsMoreThan5"></class>
+            <class name="com.railway.test.MyTicket.C59_VerifyTheFilterDisappearsWhenTheNumberTicketRecordsLessThan6"></class>
+            <class name="com.railway.test.MyTicket.C54_VerifyUserCanFilterTicketsByDepartStation"></class>
+            <class name="com.railway.test.MyTicket.C55_VerifyUserCanFilterTicketsByArriveStation"></class>
+            <class name="com.railway.test.MyTicket.C56_VerifyUserCanFilterTicketsByDepartDate"></class>
+            <class name="com.railway.test.MyTicket.C57_VerifyUserCanFilterTicketsByStatus"></class>
+            <class name="com.railway.test.MyTicket.C58_VerifyUserCanFilterTicketsByTheCombinationHeaders"></class>
+
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="Test result of Manage Ticket function in Edge Browser">
+        <parameter name="browser" value="edge"/>
         <classes>
             <class name="com.railway.test.MyTicket.C35_TheManageTableDisplaysWithCorrectFormat"></class>
             <class name="com.railway.test.MyTicket.C36_TheNoteContentDisplaysMatchedWithNumberOfNewTickets"></class>

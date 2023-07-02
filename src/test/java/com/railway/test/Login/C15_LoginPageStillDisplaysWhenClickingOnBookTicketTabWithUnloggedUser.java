@@ -3,12 +3,15 @@ package com.railway.test.Login;
 import com.railway.pageObjects.*;
 import com.railway.test.BaseTest;
 import io.qameta.allure.Allure;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.apache.xmlbeans.impl.xb.xsdschema.All;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class C15_LoginPageStillDisplaysWhenClickingOnBookTicketTabWithUnloggedUser extends BaseTest {
     @Test (description = "TC 15 - Verify Login page still displays when clicking on Book Ticket tab with unlogged user", alwaysRun = true)
+    @Severity(SeverityLevel.NORMAL)
     public void c15_LoginPageStillDisplaysWhenClickingOnBookTicketTabWithUnloggedUser() {
         Allure.step("Step 1: Navigate to Book ticket page");
         homePage.clickTab("Book ticket");

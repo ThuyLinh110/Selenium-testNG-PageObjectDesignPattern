@@ -9,6 +9,8 @@ import com.railway.pageObjects.LoginPage;
 import com.railway.pageObjects.MyTicketPage;
 import com.railway.test.BaseTest;
 import io.qameta.allure.Allure;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
@@ -90,6 +92,7 @@ public class C54_VerifyUserCanFilterTicketsByDepartStation extends BaseTest {
 
 
     @Test
+    @Severity(SeverityLevel.CRITICAL)
     public void c45_VerifyUserCanFilterTicketsByDepartStation() {
         ticketValuesByHeader=  myTicketPage.getUniqueValuesByHeader("Depart Station");
         filterValuesByHeader = myTicketPage.getUniqueValuesFilterByHeader("Depart Station");
@@ -97,19 +100,26 @@ public class C54_VerifyUserCanFilterTicketsByDepartStation extends BaseTest {
         randomDepart = Utilities.getMatchingValues(ticketValuesByHeader, filterValuesByHeader).get(0);
         int numberTicketByDepartValue = myTicketPage.getTicketsByFilter("", "","","");
 
+        Allure.step("Step 1: Select only Depart Station with 'Ignore' option ");
         myTicketPage.fillDataFilter("Ignore",null, null, null);
+
+        Allure.step("Step 2: Click Apply Filter button ");
         myTicketPage.clickApplyFilterButton();
 
         int numberTicketByFilter = myTicketPage.numberTicketRecord();
+        Allure.step("Step 3: Verify all ticket records displays ");
         Assert.assertEquals(numberTicketByFilter, numberTicketByDepartValue);
-
 
         numberTicketByDepartValue = myTicketPage.getTicketsByFilter(randomDepart, "","","");
 
+        Allure.step(String.format("Step 4: Select only Depart Station with '%s' option ",randomDepart));
         myTicketPage.fillDataFilter(randomDepart,null, null, null);
+
+        Allure.step("Step 5: Click Apply Filter button ");
         myTicketPage.clickApplyFilterButton();
 
         numberTicketByFilter = myTicketPage.numberTicketRecord();
+        Allure.step(String.format("Step 6: Verify all ticket records having Depart Station = '%s' display",randomDepart));
         Assert.assertEquals(numberTicketByFilter, numberTicketByDepartValue);
 
     }

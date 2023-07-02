@@ -6,6 +6,8 @@ import com.railway.pageObjects.HomePage;
 import com.railway.pageObjects.LoginPage;
 import com.railway.test.BaseTest;
 import io.qameta.allure.Allure;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.apache.xmlbeans.impl.xb.xsdschema.All;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -24,6 +26,7 @@ public class C17_TheWelcomeTextDisplaysCorrectlyInHeaderWithLoggedUser extends B
         validPassword = account.get("Password").toString();
     }
     @Test (description = "TC 17 - Verify the 'Welcome + username' text displays with logged user", alwaysRun = true)
+    @Severity(SeverityLevel.MINOR)
     public void c17_TheWelcomeTextDisplaysCorrectlyInHeaderWithLoggedUser() {
         Allure.step("Step 1: Navigate to Login page");
         homePage.clickTab("Login");
